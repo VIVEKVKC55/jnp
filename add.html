@@ -103,6 +103,27 @@
             border: none;
             color: #888;
         }
+
+        .search-bar {
+            background: #f8f9fa;
+            border-radius: 25px;
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .search-bar {
+            width: 100%;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -114,13 +135,22 @@
             </a>
 
             <!-- Search Bar -->
-            <form class="d-flex mx-auto w-50">
-                <input class="form-control me-2" type="search" placeholder="Search product...">
-                <button class="btn btn-danger" type="submit">Search</button>
+            <form class="search-bar mx-3 w-50">
+                <i class="fas fa-search text-muted"></i>
+                <input type="text" placeholder="Search product...">
+                <i class="fas fa-microphone text-muted"></i>
             </form>
-
             <!-- Wishlist & Account -->
             <div class="d-flex align-items-center">
+                <div class="dropdown me-3">
+                    <a href="#" class="text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+                        ENGLISH
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Hindi</a></li>
+                    </ul>
+                </div>
                 <!-- My Account Dropdown -->
                 <div class="dropdown">
                     <a class="text-dark text-decoration-none dropdown-toggle" href="#" role="button"
@@ -145,6 +175,13 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="mobile-nav mt-2">
+            <div class="search-bar">
+                <i class="fas fa-search text-muted"></i>
+                <input type="text" placeholder="Search product...">
+                <i class="fas fa-microphone text-muted"></i>
+            </div>
+        </div> -->
     </nav>
     <div class="container custom-container my-4">
         <!-- Back Button -->
