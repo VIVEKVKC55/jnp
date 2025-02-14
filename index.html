@@ -75,16 +75,26 @@
         }
 
         .category-circle {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #f8f9fa;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgb(218, 216, 216);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            border: 2px solid transparent;
         }
+
+        .category-circle:hover,
+        .category-circle:active {
+            transform: scale(1.1);
+            border-color: #fbb710;
+            /* Change border color on hover */
+        }
+
 
         .category-circle img {
             width: 70%;
@@ -92,7 +102,7 @@
         }
 
         .category-text {
-            font-size: 14px;
+            font-size: 10px;
             margin-top: 5px;
         }
 
@@ -157,50 +167,6 @@
             text-align: center;
         }
 
-        /* Button color */
-        .btn-light {
-            background-color: rgb(255, 255, 255);
-            color: #333;
-            /* Icon color */
-            border: 1px solid #ccc;
-            /* Optional border */
-        }
-
-        .list-groups {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            /* Center items */
-            gap: 10px;
-            /* Reduce spacing */
-            padding: 0;
-            /* Remove extra padding */
-        }
-
-        ul.list-groups {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            /* Remove default list styles */
-        }
-
-        /* Custom modal positioning */
-        .modal.modal-bottom .modal-dialog {
-            position: fixed;
-            bottom: -100%;
-            /* Initially hidden below the screen */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 400px;
-            margin: 0;
-            transition: bottom 0.4s ease-in-out;
-        }
-
-        /* When modal is shown, bring it up */
-        .modal.in.modal-bottom .modal-dialog {
-            bottom: 60px;
-        }
 
         .mobile-footer {
             position: fixed;
@@ -423,38 +389,36 @@
         <div class="products-catagories-area clearfix">
 
             <!-- Categories Section -->
-            <div class="container">
-                <div class="category-container d-flex justify-content-center">
-                    <div class="category-item">
-                        <div class="category-circle">
-                            <img src="img/cat-img/bastseller.jpeg" alt="Bestsellers">
-                        </div>
-                        <div class="category-text">Bestsellers</div>
+            <div class="category-container d-flex">
+                <div class="category-item">
+                    <div class="category-circle">
+                        <img src="img/cat-img/bastseller.jpeg" alt="Bestsellers">
                     </div>
-                    <div class="category-item">
-                        <div class="category-circle">
-                            <img src="img/cat-img/bastseller.jpeg" alt="MacBooks">
-                        </div>
-                        <div class="category-text">MacBooks</div>
+                    <div class="category-text">Bestsellers</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <img src="img/cat-img/bastseller.jpeg" alt="MacBooks">
                     </div>
-                    <div class="category-item">
-                        <div class="category-circle">
-                            <img src="img/cat-img/bastseller.jpeg" alt="Refurbished">
-                        </div>
-                        <div class="category-text">Refurbished</div>
+                    <div class="category-text">MacBooks</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <img src="img/cat-img/bastseller.jpeg" alt="Refurbished">
                     </div>
-                    <div class="category-item">
-                        <div class="category-circle">
-                            <img src="img/cat-img/bastseller.jpeg" alt="Monitors">
-                        </div>
-                        <div class="category-text">Monitors</div>
+                    <div class="category-text">Refurbished</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <img src="img/cat-img/bastseller.jpeg" alt="Monitors">
                     </div>
-                    <div class="category-item">
-                        <div class="category-circle">
-                            <img src="img/cat-img/bastseller.jpeg" alt="Gaming Laptops">
-                        </div>
-                        <div class="category-text">Gaming Laptops</div>
+                    <div class="category-text">Monitors</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <img src="img/cat-img/bastseller.jpeg" alt="Gaming Laptops">
                     </div>
+                    <div class="category-text">Gaming Laptops</div>
                 </div>
             </div>
             <div class="amado-pro-catagory clearfix">
