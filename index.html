@@ -276,29 +276,11 @@
 </head>
 
 <body>
-    <!-- Search Wrapper Area Start -->
-    <div class="search-wrapper section-padding-100">
-        <div class="search-close">
-            <i class="fa fa-close" aria-hidden=""></i>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-content">
-                        <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                            <button type="submit"><img src="img/core-img/search.png" alt=""></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Desktop Navbar (Hidden at ≤ 768px) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-3 desktop-nav">
         <div class="container">
             <a class="" href="index.html">
-                <h3>JNP-Online</h3>
+                <h3>JNPOnline</h3>
             </a>
 
             <!-- Search Bar -->
@@ -356,42 +338,37 @@
         <!-- Mobile Nav (max width 767px)-->
         <div class="mobile-nav">
             <!-- Navbar Brand -->
+            <div class="amado-navbar-toggler">
+                <span></span><span></span><span></span>
+            </div>
             <div class="amado-navbar-brand">
-                <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                <a class="" href="index.html">
+                    <h6>JNPOnline</h6>
+                </a>
             </div>
             <!-- Navbar Toggler -->
-            <div class="d-flex align-items-center">
-                <div class="dropdown me-3">
-                    <a href="#" class="text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
-                        ENGLISH
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">English</a></li>
-                        <li><a class="dropdown-item" href="#">Hindi</a></li>
-                    </ul>
-                </div>
-                <!-- My Account Dropdown -->
-                <div class="dropdown">
-                    <a class="text-dark text-decoration-none dropdown-toggle" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user"></i> My Account
-                    </a>
-                    <ul class="dropdown-menu custom-dropdown">
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
-                        <li><a class="dropdown-item" href="reg.html"><i
-                                    class="fas fa-user-circle me-2"></i>Regstration</a></li>
-                        <li><a class="dropdown-item" href="login.html"><i class="fas fa-user-circle me-2"></i>Login</a>
-                        </li>
-                        <li><a class="dropdown-item" href="add.html"><i class="fas fa-user-circle me-2"></i>Add
-                                Product</a>
-                        </li>
-                        <li><a class="dropdown-item" href="forgot.html"><i class="fas fa-cog me-2"></i>Forgot
-                                password</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
-                        <li><a class="dropdown-item text-danger" href="#"><i
-                                    class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
-                    </ul>
-                </div>
+
+            <!-- My Account Dropdown -->
+            <div class="dropdown">
+                <a class="text-dark text-decoration-none dropdown-toggle" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user"></i> My Account
+                </a>
+                <ul class="dropdown-menu custom-dropdown">
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+                    <li><a class="dropdown-item" href="reg.html"><i class="fas fa-user-circle me-2"></i>Regstration</a>
+                    </li>
+                    <li><a class="dropdown-item" href="login.html"><i class="fas fa-user-circle me-2"></i>Login</a>
+                    </li>
+                    <li><a class="dropdown-item" href="add.html"><i class="fas fa-user-circle me-2"></i>Add
+                            Product</a>
+                    </li>
+                    <li><a class="dropdown-item" href="forgot.html"><i class="fas fa-cog me-2"></i>Forgot
+                            password</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- Mobile Search Bar -->
@@ -649,7 +626,7 @@
             <nav class="footer-nav">
                 <ul class="footer-menu">
                     <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-plus-square"></i>ADD Product</a></li>
+                    <li><a href="add.html"><i class="fa fa-plus-square"></i>ADD Product</a></li>
                     <li>
                         <a href="#" data-toggle="modal" data-target="#categoryModal">
                             <i class="fa fa-th-large"></i>Categories
@@ -665,24 +642,6 @@
                 </ul>
             </nav>
         </footer>
-        <div id="categoryModal" class="modal fade modal-bottom" tabindex="-1" role="dialog">
-            <div class="modal-dialog customBgNone" role="document">
-                <div class="modal-content customBgNone" style='box-shadow: none;
-        border: none;'>
-                    <div class="modal-body ">
-                        <ul class="list-groups">
-                            <li class="list-group-items d-inline-block p-2 customBgNone">
-                                <!-- Create square button with icon -->
-                                <a href="{% url 'catalog:cat_products' category.slug %}"
-                                    class="btn btn-light btn-block square-btn">
-                                    <i class="{{ category.fa_icon_class }} fa-3x"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
         <script src="js/jquery/jquery-2.2.4.min.js"></script>
         <!-- Popper js -->
