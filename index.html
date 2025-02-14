@@ -104,9 +104,8 @@
             align-items: center;
             gap: 10px;
             margin-top: 10px;
-        }
-
-        .search-bar {
+            margin-left: 20px;
+            margin-right: 20px;
             width: 100%;
         }
 
@@ -115,6 +114,163 @@
             background: transparent;
             outline: none;
             width: 100%;
+        }
+
+        /* Show only on mobile */
+        @media (min-width: 768px) {
+            .mobile-search {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .desktop-nav {
+                display: none !important;
+            }
+        }
+    </style>
+    <!-- CSS for Mobile Footer -->
+    <style>
+        /* Container to hold the buttons */
+        .list-group-items {
+            display: inline-block;
+            margin-right: 1px;
+            position: relative;
+            display: block;
+            padding: 10px 10px;
+            margin-bottom: -1px;
+
+        }
+
+        /* Ensure each button is square with rounded corners */
+        .square-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            /* Adjust the size as needed */
+            height: 70px;
+            /* Ensure the button is square */
+            padding: 0;
+            border-radius: 12px;
+            /* Rounded corners */
+            text-align: center;
+        }
+
+        /* Button color */
+        .btn-light {
+            background-color: rgb(255, 255, 255);
+            color: #333;
+            /* Icon color */
+            border: 1px solid #ccc;
+            /* Optional border */
+        }
+
+        .list-groups {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Center items */
+            gap: 10px;
+            /* Reduce spacing */
+            padding: 0;
+            /* Remove extra padding */
+        }
+
+        ul.list-groups {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /* Remove default list styles */
+        }
+
+        /* Custom modal positioning */
+        .modal.modal-bottom .modal-dialog {
+            position: fixed;
+            bottom: -100%;
+            /* Initially hidden below the screen */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            margin: 0;
+            transition: bottom 0.4s ease-in-out;
+        }
+
+        /* When modal is shown, bring it up */
+        .modal.in.modal-bottom .modal-dialog {
+            bottom: 60px;
+        }
+
+        .mobile-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-menu {
+            display: flex;
+            justify-content: space-between;
+            /* Ensures even spacing */
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .footer-menu li {
+            flex: 1;
+            /* Equal width for all items */
+            text-align: center;
+        }
+
+        .footer-menu li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+            width: 100%;
+        }
+
+        .footer-menu li a i {
+            font-size: 20px;
+            margin-bottom: 4px;
+            transition: all 0.3s ease;
+        }
+
+        /* Fix the extra space issue by ensuring proper alignment */
+        .footer-nav {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Hover & Active Effects */
+        .footer-menu li a:hover,
+        .footer-menu li a.active {
+            color: #fbb710;
+            transform: scale(1.1);
+        }
+
+        .footer-menu li a:hover i,
+        .footer-menu li a.active i {
+            color: #fbb710;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-footer {
+                display: none !important;
+            }
         }
     </style>
 </head>
@@ -138,8 +294,8 @@
             </div>
         </div>
     </div>
-    <!-- Search Wrapper Area End -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-3">
+    <!-- Desktop Navbar (Hidden at ≤ 768px) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-3 desktop-nav">
         <div class="container">
             <a class="" href="index.html">
                 <h3>JNP-Online</h3>
@@ -204,11 +360,46 @@
                 <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Navbar Toggler -->
-            <div class="amado-navbar-toggler">
-                <span></span><span></span><span></span>
+            <div class="d-flex align-items-center">
+                <div class="dropdown me-3">
+                    <a href="#" class="text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+                        ENGLISH
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Hindi</a></li>
+                    </ul>
+                </div>
+                <!-- My Account Dropdown -->
+                <div class="dropdown">
+                    <a class="text-dark text-decoration-none dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i> My Account
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="reg.html"><i
+                                    class="fas fa-user-circle me-2"></i>Regstration</a></li>
+                        <li><a class="dropdown-item" href="login.html"><i class="fas fa-user-circle me-2"></i>Login</a>
+                        </li>
+                        <li><a class="dropdown-item" href="add.html"><i class="fas fa-user-circle me-2"></i>Add
+                                Product</a>
+                        </li>
+                        <li><a class="dropdown-item" href="forgot.html"><i class="fas fa-cog me-2"></i>Forgot
+                                password</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i
+                                    class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-
+        <!-- Mobile Search Bar -->
+        <div class="search-bar mobile-search mb-3">
+            <i class="fas fa-search text-muted"></i>
+            <input type="text" placeholder="Search product...">
+            <i class="fas fa-microphone text-muted"></i>
+        </div>
         <!-- Header Area Start -->
         <header class="header-area clearfix">
             <!-- Close Icon -->
@@ -454,7 +645,44 @@
             </div>
         </footer>
         <!-- ##### Footer Area End ##### -->
+        <footer class="mobile-footer d-md-none">
+            <nav class="footer-nav">
+                <ul class="footer-menu">
+                    <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>ADD Product</a></li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#categoryModal">
+                            <i class="fa fa-th-large"></i>Categories
+                        </a>
+                    </li>
 
+                    <li class="amado-navbar-toggler">
+                        <a href="#">
+                            <i class="fa fa-bars"></i>
+                            <span>Menu</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+        <div id="categoryModal" class="modal fade modal-bottom" tabindex="-1" role="dialog">
+            <div class="modal-dialog customBgNone" role="document">
+                <div class="modal-content customBgNone" style='box-shadow: none;
+        border: none;'>
+                    <div class="modal-body ">
+                        <ul class="list-groups">
+                            <li class="list-group-items d-inline-block p-2 customBgNone">
+                                <!-- Create square button with icon -->
+                                <a href="{% url 'catalog:cat_products' category.slug %}"
+                                    class="btn btn-light btn-block square-btn">
+                                    <i class="{{ category.fa_icon_class }} fa-3x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
         <script src="js/jquery/jquery-2.2.4.min.js"></script>
         <!-- Popper js -->
