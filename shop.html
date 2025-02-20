@@ -3,565 +3,279 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
-    <title>Amado - Furniture Ecommerce Template | Shop</title>
-
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Core Style CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laptop Listings</title>
     <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            transition: 0.3s;
+        }
 
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .featured-badge {
+            background-color: #FFD700;
+            color: #000;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .wishlist-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .filter-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+    <style>
+        /* Dropdown Item Hover */
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Custom dropdown button spacing */
+        .custom-dropdown {
+            min-width: 180px;
+        }
+
+        .search-bar {
+            background: #e1e6eb;
+            border-radius: 5px;
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 100%;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+        }
+
+        /* Show only on mobile */
+        @media (min-width: 768px) {
+            .mobile-search {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .desktop-nav {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Search Wrapper Area Start -->
-    <div class="search-wrapper section-padding-100">
-        <div class="search-close">
-            <i class="fa fa-close" aria-hidden="true"></i>
-        </div>
+<body class="bg-light">
+    <!-- Desktop Navbar (Hidden at ≤ 768px) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-3 desktop-nav">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-content">
-                        <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                            <button type="submit"><img src="img/core-img/search.png" alt=""></button>
-                        </form>
-                    </div>
+            <a style="font-size: calc(1.3rem + .6vw);" class="" href="index.html">
+                JNPOnline
+            </a>
+
+            <!-- Search Bar -->
+            <form class="search-bar mx-3 w-50">
+                <i class="fas fa-search text-muted"></i>
+                <input type="text" placeholder="Search product...">
+                <i class="fas fa-microphone text-muted"></i>
+            </form>
+            <!-- Wishlist & Account -->
+            <div class="d-flex align-items-center">
+                <div class="dropdown me-3">
+                    <a href="#" class="text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+                        ENGLISH
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Hindi</a></li>
+                    </ul>
+                </div>
+                <!-- My Account Dropdown -->
+                <div class="dropdown">
+                    <a class="text-dark text-decoration-none dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i> My Account
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
+                        <!-- <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li> -->
+                        <li><a class="dropdown-item" href="reg.html"><i
+                                    class="fas fa-user-circle me-2"></i>Regstration</a></li>
+                        <li><a class="dropdown-item" href="login.html"><i class="fas fa-user-circle me-2"></i>Login</a>
+                        </li>
+                        <li><a class="dropdown-item" href="add.html"><i class="fas fa-user-circle me-2"></i>Add
+                                Product</a>
+                        </li>
+                        <li><a class="dropdown-item" href="forgot.html"><i class="fas fa-cog me-2"></i>Forgot
+                                password</a></li>
+                        <li><a class="dropdown-item" href="change-password.html"><i class="fas fa-cog me-2"></i>Change
+                                password</a></li>
+                        <!-- <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i
+                                        class="fas fa-sign-out-alt me-2"></i>Logout</a></li> -->
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Search Wrapper Area End -->
-
+    </nav>
     <!-- ##### Main Content Wrapper Start ##### -->
     <div class="main-content-wrapper d-flex clearfix">
 
         <!-- Mobile Nav (max width 767px)-->
         <div class="mobile-nav">
             <!-- Navbar Brand -->
-            <div class="amado-navbar-brand">
-                <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-            </div>
-            <!-- Navbar Toggler -->
             <div class="amado-navbar-toggler">
                 <span></span><span></span><span></span>
             </div>
-        </div>
+            <div class="amado-navbar-brand" style="align-items: center;">
+                <a class="" href="index.html">
+                    <h6>JNPOnline</h6>
+                </a>
+            </div>
+            <!-- Navbar Toggler -->
 
-        <!-- Header Area Start -->
-        <header class="header-area clearfix">
-            <!-- Close Icon -->
-            <div class="nav-close">
-                <i class="fa fa-close" aria-hidden="true"></i>
-            </div>
-            <!-- Logo -->
-            <div class="logo">
-                <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-            </div>
-            <!-- Amado Nav -->
-            <nav class="amado-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="shop.html">Shop</a></li>
-                    <li><a href="product-details.html">Product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
+            <!-- My Account Dropdown -->
+            <div class="dropdown">
+                <a class="text-dark text-decoration-none dropdown-toggle" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user"></i> My Account
+                </a>
+                <ul class="dropdown-menu custom-dropdown">
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+                    <li><a class="dropdown-item" href="reg.html"><i class="fas fa-user-circle me-2"></i>Regstration</a>
+                    </li>
+                    <li><a class="dropdown-item" href="login.html"><i class="fas fa-user-circle me-2"></i>Login</a>
+                    </li>
+                    <li><a class="dropdown-item" href="add.html"><i class="fas fa-user-circle me-2"></i>Add
+                            Product</a>
+                    </li>
+                    <li><a class="dropdown-item" href="forgot.html"><i class="fas fa-cog me-2"></i>Forgot
+                            password</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+                    </li>
                 </ul>
-            </nav>
-            <!-- Button Group -->
-            <div class="amado-btn-group mt-30 mb-100">
-                <a href="#" class="btn amado-btn mb-15">%Discount%</a>
-                <a href="#" class="btn amado-btn active">New this week</a>
-            </div>
-            <!-- Cart Menu -->
-            <div class="cart-fav-search mb-100">
-                <a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
-                <a href="#" class="fav-nav"><img src="img/core-img/favorites.png" alt=""> Favourite</a>
-                <a href="#" class="search-nav"><img src="img/core-img/search.png" alt=""> Search</a>
-            </div>
-            <!-- Social Button -->
-            <div class="social-info d-flex justify-content-between">
-                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </div>
-        </header>
-        <!-- Header Area End -->
-
-        <div class="shop_sidebar_area">
-
-            <!-- ##### Single Widget ##### -->
-            <div class="widget catagory mb-50">
-                <!-- Widget Title -->
-                <h6 class="widget-title mb-30">Catagories</h6>
-
-                <!--  Catagories  -->
-                <div class="catagories-menu">
-                    <ul>
-                        <li class="active"><a href="#">Chairs</a></li>
-                        <li><a href="#">Beds</a></li>
-                        <li><a href="#">Accesories</a></li>
-                        <li><a href="#">Furniture</a></li>
-                        <li><a href="#">Home Deco</a></li>
-                        <li><a href="#">Dressings</a></li>
-                        <li><a href="#">Tables</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- ##### Single Widget ##### -->
-            <div class="widget brands mb-50">
-                <!-- Widget Title -->
-                <h6 class="widget-title mb-30">Brands</h6>
-
-                <div class="widget-desc">
-                    <!-- Single Form Check -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="amado">
-                        <label class="form-check-label" for="amado">Amado</label>
-                    </div>
-                    <!-- Single Form Check -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="ikea">
-                        <label class="form-check-label" for="ikea">Ikea</label>
-                    </div>
-                    <!-- Single Form Check -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="furniture">
-                        <label class="form-check-label" for="furniture">Furniture Inc</label>
-                    </div>
-                    <!-- Single Form Check -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="factory">
-                        <label class="form-check-label" for="factory">The factory</label>
-                    </div>
-                    <!-- Single Form Check -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="artdeco">
-                        <label class="form-check-label" for="artdeco">Artdeco</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ##### Single Widget ##### -->
-            <div class="widget color mb-50">
-                <!-- Widget Title -->
-                <h6 class="widget-title mb-30">Color</h6>
-
-                <div class="widget-desc">
-                    <ul class="d-flex">
-                        <li><a href="#" class="color1"></a></li>
-                        <li><a href="#" class="color2"></a></li>
-                        <li><a href="#" class="color3"></a></li>
-                        <li><a href="#" class="color4"></a></li>
-                        <li><a href="#" class="color5"></a></li>
-                        <li><a href="#" class="color6"></a></li>
-                        <li><a href="#" class="color7"></a></li>
-                        <li><a href="#" class="color8"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- ##### Single Widget ##### -->
-            <div class="widget price mb-50">
-                <!-- Widget Title -->
-                <h6 class="widget-title mb-30">Price</h6>
-
-                <div class="widget-desc">
-                    <div class="slider-range">
-                        <div data-min="10" data-max="1000" data-unit="$" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="10" data-value-max="1000" data-label-result="">
-                            <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
-                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
-                        </div>
-                        <div class="range-price">$10 - $1000</div>
-                    </div>
-                </div>
             </div>
         </div>
+        <!-- Mobile Search Bar -->
+        <div class="search-bar mobile-search mb-3">
+            <i class="fas fa-search text-muted"></i>
+            <input type="text" placeholder="Search product...">
+            <i class="fas fa-microphone text-muted"></i>
+        </div>
+        <!-- Header Area End -->
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-md-3">
+                <h4>Laptop in India</h4>
+                <div class="filter-section">
+                    <h6>Categories</h6>
+                    <p><a href="#" class="text-dark text-decoration-none">All Categories</a></p>
+                </div>
 
-        <div class="amado_product_area section-padding-100">
-            <div class="container-fluid">
+                <div class="filter-section mt-3">
+                    <h6>Locations</h6>
+                    <p><a href="#" class="text-dark text-decoration-none">All Locations</a></p>
+                </div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="product-topbar d-xl-flex align-items-end justify-content-between">
-                            <!-- Total Products -->
-                            <div class="total-products">
-                                <p>Showing 1-8 0f 25</p>
-                                <div class="view d-flex">
-                                    <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <!-- Sorting -->
-                            <div class="product-sorting d-flex">
-                                <div class="sort-by-date d-flex align-items-center mr-15">
-                                    <p>Sort by</p>
-                                    <form action="#" method="get">
-                                        <select name="select" id="sortBydate">
-                                            <option value="value">Date</option>
-                                            <option value="value">Newest</option>
-                                            <option value="value">Popular</option>
-                                        </select>
-                                    </form>
-                                </div>
-                                <div class="view-product d-flex align-items-center">
-                                    <p>View</p>
-                                    <form action="#" method="get">
-                                        <select name="select" id="viewProduct">
-                                            <option value="value">12</option>
-                                            <option value="value">24</option>
-                                            <option value="value">48</option>
-                                            <option value="value">96</option>
-                                        </select>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                <div class="filter-section mt-3">
+                    <h6>Budget</h6>
+                    <div class="d-flex">
+                        <input type="number" class="form-control me-2" placeholder="min">
+                        <input type="number" class="form-control me-2" placeholder="max">
+                        <button class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Listings -->
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span>Showing results for <strong>"laptop"</strong> <span class="badge bg-success">5581
+                            Ads</span></span>
+                    <div>
+                        <span class="fw-bold">SORT BY:</span>
+                        <select class="form-select d-inline-block w-auto">
+                            <option>Date Published</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="row">
-
-                    <!-- Single Product Area -->
-                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                        <div class="single-product-wrapper">
-                            <!-- Product Image -->
-                            <div class="product-img">
-                                <img src="img/product-img/product1.jpg" alt="">
-                                <!-- Hover Thumb -->
-                                <img class="hover-img" src="img/product-img/product2.jpg" alt="">
-                            </div>
-
-                            <!-- Product Description -->
-                            <div class="product-description d-flex align-items-center justify-content-between">
-                                <!-- Product Meta Data -->
-                                <div class="product-meta-data">
-                                    <div class="line"></div>
-                                    <p class="product-price">$180</p>
-                                    <a href="product-details.html">
-                                        <h6>Modern Chair</h6>
-                                    </a>
-                                </div>
-                                <!-- Ratings & Cart -->
-                                <div class="ratings-cart text-right">
-                                    <div class="ratings">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Product Card -->
+                    <div class="col-md-4">
+                        <div class="product-card position-relative">
+                            <span class="featured-badge">FEATURED</span>
+                            <img src="img/laptop1.jpg" class="img-fluid rounded" alt="Laptop">
+                            <span class="wishlist-icon"><i class="far fa-heart"></i></span>
+                            <p class="price">₹ 13,500</p>
+                            <p>Like-New | 12GB | 1TB+256NVMe | 1 Yr Warranty</p>
+                            <p class="text-muted small">DHARAVI, MUMBAI • 3 DAYS AGO</p>
                         </div>
                     </div>
 
-                    <!-- Single Product Area -->
-                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                        <div class="single-product-wrapper">
-                            <!-- Product Image -->
-                            <div class="product-img">
-                                <img src="img/product-img/product2.jpg" alt="">
-                                <!-- Hover Thumb -->
-                                <img class="hover-img" src="img/product-img/product3.jpg" alt="">
-                            </div>
-
-                            <!-- Product Description -->
-                            <div class="product-description d-flex align-items-center justify-content-between">
-                                <!-- Product Meta Data -->
-                                <div class="product-meta-data">
-                                    <div class="line"></div>
-                                    <p class="product-price">$180</p>
-                                    <a href="product-details.html">
-                                        <h6>Modern Chair</h6>
-                                    </a>
-                                </div>
-                                <!-- Ratings & Cart -->
-                                <div class="ratings-cart text-right">
-                                    <div class="ratings">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Repeat for other products -->
+                    <div class="col-md-4">
+                        <div class="product-card position-relative">
+                            <span class="featured-badge">FEATURED</span>
+                            <img src="img/laptop2.jpg" class="img-fluid rounded" alt="Laptop">
+                            <span class="wishlist-icon"><i class="far fa-heart"></i></span>
+                            <p class="price">₹ 13,500</p>
+                            <p>Like-New | i5 | 12GB | 1 Yr Warranty</p>
+                            <p class="text-muted small">DHARAVI, MUMBAI • 2 DAYS AGO</p>
                         </div>
                     </div>
 
-                    <!-- Single Product Area -->
-                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                        <div class="single-product-wrapper">
-                            <!-- Product Image -->
-                            <div class="product-img">
-                                <img src="img/product-img/product3.jpg" alt="">
-                                <!-- Hover Thumb -->
-                                <img class="hover-img" src="img/product-img/product4.jpg" alt="">
-                            </div>
-
-                            <!-- Product Description -->
-                            <div class="product-description d-flex align-items-center justify-content-between">
-                                <!-- Product Meta Data -->
-                                <div class="product-meta-data">
-                                    <div class="line"></div>
-                                    <p class="product-price">$180</p>
-                                    <a href="product-details.html">
-                                        <h6>Modern Chair</h6>
-                                    </a>
-                                </div>
-                                <!-- Ratings & Cart -->
-                                <div class="ratings-cart text-right">
-                                    <div class="ratings">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-md-4">
+                        <div class="product-card position-relative">
+                            <span class="featured-badge">FEATURED</span>
+                            <img src="img/laptop3.jpg" class="img-fluid rounded" alt="Laptop">
+                            <span class="wishlist-icon"><i class="far fa-heart"></i></span>
+                            <p class="price">₹ 39,800</p>
+                            <p>4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
+                            <p class="text-muted small">DADAR WEST, MUMBAI • 2 DAYS AGO</p>
                         </div>
-                    </div>
-
-                    <!-- Single Product Area -->
-                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                        <div class="single-product-wrapper">
-                            <!-- Product Image -->
-                            <div class="product-img">
-                                <img src="img/product-img/product4.jpg" alt="">
-                                <!-- Hover Thumb -->
-                                <img class="hover-img" src="img/product-img/product5.jpg" alt="">
-                            </div>
-
-                            <!-- Product Description -->
-                            <div class="product-description d-flex align-items-center justify-content-between">
-                                <!-- Product Meta Data -->
-                                <div class="product-meta-data">
-                                    <div class="line"></div>
-                                    <p class="product-price">$180</p>
-                                    <a href="product-details.html">
-                                        <h6>Modern Chair</h6>
-                                    </a>
-                                </div>
-                                <!-- Ratings & Cart -->
-                                <div class="ratings-cart text-right">
-                                    <div class="ratings">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Product Area -->
-                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                        <div class="single-product-wrapper">
-                            <!-- Product Image -->
-                            <div class="product-img">
-                                <img src="img/product-img/product5.jpg" alt="">
-                                <!-- Hover Thumb -->
-                                <img class="hover-img" src="img/product-img/product6.jpg" alt="">
-                            </div>
-
-                            <!-- Product Description -->
-                            <div class="product-description d-flex align-items-center justify-content-between">
-                                <!-- Product Meta Data -->
-                                <div class="product-meta-data">
-                                    <div class="line"></div>
-                                    <p class="product-price">$180</p>
-                                    <a href="product-details.html">
-                                        <h6>Modern Chair</h6>
-                                    </a>
-                                </div>
-                                <!-- Ratings & Cart -->
-                                <div class="ratings-cart text-right">
-                                    <div class="ratings">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Product Area -->
-                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                        <div class="single-product-wrapper">
-                            <!-- Product Image -->
-                            <div class="product-img">
-                                <img src="img/product-img/product6.jpg" alt="">
-                                <!-- Hover Thumb -->
-                                <img class="hover-img" src="img/product-img/product1.jpg" alt="">
-                            </div>
-
-                            <!-- Product Description -->
-                            <div class="product-description d-flex align-items-center justify-content-between">
-                                <!-- Product Meta Data -->
-                                <div class="product-meta-data">
-                                    <div class="line"></div>
-                                    <p class="product-price">$180</p>
-                                    <a href="product-details.html">
-                                        <h6>Modern Chair</h6>
-                                    </a>
-                                </div>
-                                <!-- Ratings & Cart -->
-                                <div class="ratings-cart text-right">
-                                    <div class="ratings">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Pagination -->
-                        <nav aria-label="navigation">
-                            <ul class="pagination justify-content-end mt-50">
-                                <li class="page-item active"><a class="page-link" href="#">01.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">04.</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ##### Main Content Wrapper End ##### -->
 
-    <!-- ##### Newsletter Area Start ##### -->
-    <section class="newsletter-area section-padding-100-0">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Newsletter Text -->
-                <div class="col-12 col-lg-6 col-xl-7">
-                    <div class="newsletter-text mb-100">
-                        <h2>Subscribe for a <span>25% Discount</span></h2>
-                        <p>Nulla ac convallis lorem, eget euismod nisl. Donec in libero sit amet mi vulputate consectetur. Donec auctor interdum purus, ac finibus massa bibendum nec.</p>
-                    </div>
-                </div>
-                <!-- Newsletter Form -->
-                <div class="col-12 col-lg-6 col-xl-5">
-                    <div class="newsletter-form mb-100">
-                        <form action="#" method="post">
-                            <input type="email" name="email" class="nl-email" placeholder="Your E-mail">
-                            <input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Newsletter Area End ##### -->
-
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Single Widget Area -->
-                <div class="col-12 col-lg-4">
-                    <div class="single_widget_area">
-                        <!-- Logo -->
-                        <div class="footer-logo mr-50">
-                            <a href="index.html"><img src="img/core-img/logo2.png" alt=""></a>
-                        </div>
-                        <!-- Copywrite Text -->
-                        <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> & Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
-                </div>
-                <!-- Single Widget Area -->
-                <div class="col-12 col-lg-8">
-                    <div class="single_widget_area">
-                        <!-- Footer Menu -->
-                        <div class="footer_menu">
-                            <nav class="navbar navbar-expand-lg justify-content-end">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                                <div class="collapse navbar-collapse" id="footerNavContent">
-                                    <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="shop.html">Shop</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="product-details.html">Product</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="cart.html">Cart</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="checkout.html">Checkout</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ##### Footer Area End ##### -->
-
-    <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
+    <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-
 </body>
 
 </html>
