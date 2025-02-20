@@ -46,17 +46,16 @@
             cursor: pointer;
         }
 
-        p {
+        .product-card p {
             margin-bottom: 5px;
             font-size: 12px;
             /* Make text smaller */
         }
 
-        .text-muted {
+        .custom-text-muted {
             font-size: 9px;
             /* Smaller location & time text */
         }
-
 
         .filter-section {
             background: #f8f9fa;
@@ -77,6 +76,7 @@
 
         .search-bar {
             background: #f0f1f3;
+            border: 1px solid #dc3545;
             border-radius: 3px;
             padding: 8px 15px;
             display: flex;
@@ -201,12 +201,12 @@
             </div>
         </div>
         <!-- Mobile Search Bar -->
-        <div class="search-bar mobile-search mb-3">
+        <div class="search-bar mobile-search m-3">
             <i class="fas fa-search text-muted"></i>
             <input type="text" placeholder="Search product...">
             <i class="fas fa-microphone text-muted"></i>
         </div>
-        <!-- <header class="header-area clearfix">
+        <!-- <header class="header-area bg-light">
             <div class="nav-close">
                 <i class="fa fa-close" aria-hidden="true"></i>
             </div>
@@ -232,7 +232,7 @@
         <div class="row">
             <!-- Sidebar Filters -->
             <div class="col-md-3">
-                <!-- <h4>Laptop in India</h4>
+                <h4>Laptop in India</h4>
                 <div class="filter-section">
                     <h6>Categories</h6>
                     <p><a href="#" class="text-dark text-decoration-none">All Categories</a></p>
@@ -250,7 +250,7 @@
                         <input type="number" class="form-control me-2" placeholder="max">
                         <button class="btn btn-primary">Apply</button>
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <!-- Product Listings -->
@@ -277,7 +277,7 @@
                                     <i class="far fa-heart"></i>
                                 </span>
                                 <p class="mt-2 text-dark">4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
-                                <div class="d-flex justify-content-between text-muted small mt-auto">
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
                                     <span class="text-start">DADAR WEST, MUMBAI</span>
                                     <span class="text-end">2 DAYS AGO</span>
                                 </div>
@@ -293,7 +293,7 @@
                                     <i class="far fa-heart"></i>
                                 </span>
                                 <p class="mt-2 text-dark">Like-New | i5 | 12GB | 1 Yr Warranty</p>
-                                <div class="d-flex justify-content-between text-muted small mt-auto">
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
                                     <span class="text-start">DHARAVI, MUMBAI</span>
                                     <span class="text-end">2 DAYS AGO</span>
                                 </div>
@@ -308,7 +308,7 @@
                                     <i class="far fa-heart"></i>
                                 </span>
                                 <p class="mt-2 text-dark">4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
-                                <div class="d-flex justify-content-between text-muted small mt-auto">
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
                                     <span class="text-start">DADAR WEST, MUMBAI</span>
                                     <span class="text-end">2 DAYS AGO</span>
                                 </div>
@@ -323,7 +323,7 @@
                                     <i class="far fa-heart"></i>
                                 </span>
                                 <p class="mt-2 text-dark">4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
-                                <div class="d-flex justify-content-between text-muted small mt-auto">
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
                                     <span class="text-start">DADAR WEST, MUMBAI</span>
                                     <span class="text-end">2 DAYS AGO</span>
                                 </div>
@@ -338,7 +338,7 @@
                                     <i class="far fa-heart"></i>
                                 </span>
                                 <p class="mt-2 text-dark">4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
-                                <div class="d-flex justify-content-between text-muted small mt-auto">
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
                                     <span class="text-start">DADAR WEST, MUMBAI</span>
                                     <span class="text-end">2 DAYS AGO</span>
                                 </div>
@@ -353,7 +353,99 @@
                                     <i class="far fa-heart"></i>
                                 </span>
                                 <p class="mt-2 text-dark">Like-New | i5 | 12GB | 1 Yr Warranty</p>
-                                <div class="d-flex justify-content-between text-muted small mt-auto">
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
+                                    <span class="text-start">DHARAVI, MUMBAI</span>
+                                    <span class="text-end">2 DAYS AGO</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Product Card -->
+                    <div class="col-md-4 mt-4">
+                        <a href="product-details.html" class="text-decoration-none">
+                            <div class="product-card position-relative h-100">
+                                <img src="img/cat-img/bastseller.jpeg" class="img-fluid rounded" alt="Laptop">
+                                <span class="wishlist-icon position-absolute top-0 end-0 m-2">
+                                    <i class="far fa-heart"></i>
+                                </span>
+                                <p class="mt-2 text-dark">4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
+                                    <span class="text-start">DADAR WEST, MUMBAI</span>
+                                    <span class="text-end">2 DAYS AGO</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Duplicate this block for other products -->
+                    <div class="col-md-4 mt-4">
+                        <a href="product-details.html" class="text-decoration-none">
+                            <div class="product-card position-relative h-100">
+                                <img src="img/cat-img/laptop.jpeg" class="img-fluid rounded" alt="Laptop">
+                                <span class="wishlist-icon position-absolute top-0 end-0 m-2">
+                                    <i class="far fa-heart"></i>
+                                </span>
+                                <p class="mt-2 text-dark">Like-New | i5 | 12GB | 1 Yr Warranty</p>
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
+                                    <span class="text-start">DHARAVI, MUMBAI</span>
+                                    <span class="text-end">2 DAYS AGO</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <a href="product-details.html" class="text-decoration-none">
+                            <div class="product-card position-relative h-100">
+                                <img src="img/cat-img/monitor.jpeg" class="img-fluid rounded" alt="Laptop">
+                                <span class="wishlist-icon position-absolute top-0 end-0 m-2">
+                                    <i class="far fa-heart"></i>
+                                </span>
+                                <p class="mt-2 text-dark">4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
+                                    <span class="text-start">DADAR WEST, MUMBAI</span>
+                                    <span class="text-end">2 DAYS AGO</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <a href="product-details.html" class="text-decoration-none">
+                            <div class="product-card position-relative h-100">
+                                <img src="img/cat-img/monitor.jpeg" class="img-fluid rounded" alt="Laptop">
+                                <span class="wishlist-icon position-absolute top-0 end-0 m-2">
+                                    <i class="far fa-heart"></i>
+                                </span>
+                                <p class="mt-2 text-dark">4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
+                                    <span class="text-start">DADAR WEST, MUMBAI</span>
+                                    <span class="text-end">2 DAYS AGO</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <a href="product-details.html" class="text-decoration-none">
+                            <div class="product-card position-relative h-100">
+                                <img src="img/cat-img/bastseller.jpeg" class="img-fluid rounded" alt="Laptop">
+                                <span class="wishlist-icon position-absolute top-0 end-0 m-2">
+                                    <i class="far fa-heart"></i>
+                                </span>
+                                <p class="mt-2 text-dark">4 months old Acer Aspire 5 - Intel i7, 16GB RAM</p>
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
+                                    <span class="text-start">DADAR WEST, MUMBAI</span>
+                                    <span class="text-end">2 DAYS AGO</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <a href="product-details.html" class="text-decoration-none">
+                            <div class="product-card position-relative h-100">
+                                <img src="img/cat-img/laptop.jpeg" class="img-fluid rounded" alt="Laptop">
+                                <span class="wishlist-icon position-absolute top-0 end-0 m-2">
+                                    <i class="far fa-heart"></i>
+                                </span>
+                                <p class="mt-2 text-dark">Like-New | i5 | 12GB | 1 Yr Warranty</p>
+                                <div class="d-flex justify-content-between custom-text-muted text-muted small mt-auto">
                                     <span class="text-start">DHARAVI, MUMBAI</span>
                                     <span class="text-end">2 DAYS AGO</span>
                                 </div>
