@@ -66,6 +66,42 @@
                 display: none !important;
             }
         }
+
+        .banner-card {
+            height: 250px;
+            /* Ensuring all banners have the same height */
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner-img {
+            height: 100%;
+            /* Ensuring images cover the whole card */
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .category-card h4 {
+            font-size: 15px
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(237, 90, 90, 0.6);
+            /* Dark overlay for better text readability */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .banner-card:hover .overlay {
+            background: rgba(38, 23, 23, 0.8);
+            /* Slightly darken overlay on hover */
+        }
     </style>
     <!-- CSS for Mobile Footer -->
     <style>
@@ -125,13 +161,13 @@
         /* Hover & Active Effects */
         .footer-menu li a:hover,
         .footer-menu li a.active {
-            color: #fbb710;
+            color: #dc3545;
             transform: scale(1.1);
         }
 
         .footer-menu li a:hover i,
         .footer-menu li a.active i {
-            color: #fbb710;
+            color: #dc3545;
         }
 
         @media (min-width: 768px) {
@@ -276,130 +312,130 @@
 
                 <!-- Single Category -->
 
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/1.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>Bastsellers</h6>
+                            <h4>Bastsellers</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/2.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>MacBooks</h6>
+                            <h4>MacBooks</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/3.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>Refurbished devices</h6>
+                            <h4>Refurbished devices</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/4.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>Monitors & desktop</h6>
+                            <h4>Monitors & desktop</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/3.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>All laptops</h6>
+                            <h4>All laptops</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/1.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>Bastsellers</h6>
+                            <h4>Bastsellers</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/2.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>MacBooks</h6>
+                            <h4>MacBooks</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/3.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>Refurbished devices</h6>
+                            <h4>Refurbished devices</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/4.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>Monitors & desktop</h6>
+                            <h4>Monitors & desktop</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/3.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
-                            <h6>All laptops</h6>
+                            <h4>All laptops</h4>
                             <div class="line"></div>
                         </div>
                     </a>
                 </div>
                 <!-- Single Catagory -->
-                <!-- <div class="single-products-catagory clearfix">
+                <!-- <div class="single-products-catagory category-card clearfix">
                     <a href="shop.html">
                         <img src="img/bg-img/6.jpg" alt="">
                         <div class="hover-content">
                             <div class="line"></div>
                             <p>From $320</p>
-                            <h6>Small Table</h6>
+                            <h4>Small Table</h4>
                         </div>
                     </a>
                 </div> -->
@@ -407,41 +443,50 @@
             </div>
             <!-- Product Catagories Area End -->
         </div>
-        <!-- ##### Main Content Wrapper End ##### -->
 
         <!-- ##### Newsletter Area Start ##### -->
-        <div class="container">
-            <h5 class="fw-bold">PROMOTED CONTENT</h5>
+        <div class="container mb-4 mt-4">
+            <h5 class="fw-bold text-center mb-4">PROMOTED CONTENT</h5>
             <div class="row g-3">
-                <!-- First Card -->
-                <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="img/bg-img/3.jpg" class="card-img-top" alt="Unsold Cars Clearance">
-                        <div class="card-body p-2">
-                            <a href="#" class="text-decoration-none fw-bold small">Search Ads</a>
-                            <p class="card-text fw-semibold">Unsold Cars Clearance Of 2023 In Agra (Limited Time)
-                            </p>
+                <!-- First Banner -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm banner-card position-relative">
+                        <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Unsold Cars Clearance">
+                        <div class="overlay">
+                            <a href="#" class="text-decoration-none fw-bold small text-light">Search Ads</a>
+                            <p class="card-text fw-semibold text-light">Unsold Cars Clearance Of 2023 In Agra (Limited
+                                Time)</p>
                         </div>
                     </div>
                 </div>
-                <!-- Second Card -->
-                <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="img/bg-img/3.jpg" class="card-img-top" alt="Cinematic Splits">
-                        <div class="card-body p-2">
-                            <a href="#" class="text-decoration-none fw-bold small">Herbeauty</a>
-                            <p class="card-text fw-semibold">14 Cinematic Splits That Deliver Unforgettable Mic-Drop
-                                Moments</p>
+                <!-- Second Banner -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm banner-card position-relative">
+                        <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Cinematic Splits">
+                        <div class="overlay">
+                            <a href="#" class="text-decoration-none fw-bold small text-light">Herbeauty</a>
+                            <p class="card-text fw-semibold text-light">14 Cinematic Splits That Deliver Unforgettable
+                                Mic-Drop Moments</p>
                         </div>
                     </div>
                 </div>
-                <!-- Third Card -->
-                <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="img/bg-img/3.jpg" class="card-img-top" alt="Cringe Moment">
-                        <div class="card-body p-2">
-                            <a href="#" class="text-decoration-none fw-bold small">Brainberries</a>
-                            <p class="card-text fw-semibold">The Cringe That Broke The Internet</p>
+                <!-- Third Banner -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm banner-card position-relative">
+                        <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Cringe Moment">
+                        <div class="overlay">
+                            <a href="#" class="text-decoration-none fw-bold small text-light">Brainberries</a>
+                            <p class="card-text fw-semibold text-light">The Cringe That Broke The Internet</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fourth Banner -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm banner-card position-relative">
+                        <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Tech Update">
+                        <div class="overlay">
+                            <a href="#" class="text-decoration-none fw-bold small text-light">Tech World</a>
+                            <p class="card-text fw-semibold text-light">Latest Gadgets That Are Changing The World</p>
                         </div>
                     </div>
                 </div>
