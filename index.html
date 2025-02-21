@@ -183,6 +183,22 @@
                 display: none !important;
             }
         }
+
+        .goog-te-gadget {
+            font-size: 0px !important;
+        }
+
+        .goog-te-gadget span {
+            display: none;
+        }
+
+        /* Style the dropdown */
+        .goog-te-combo {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 
@@ -201,7 +217,8 @@
             </form>
             <!-- Wishlist & Account -->
             <div class="d-flex align-items-center">
-                <div class="dropdown me-3">
+                <div id="google_translate_element"></div>
+                <!-- <div class="dropdown me-3">
                     <a href="#" class="text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
                         ENGLISH
                     </a>
@@ -209,7 +226,7 @@
                         <li><a class="dropdown-item" href="#">English</a></li>
                         <li><a class="dropdown-item" href="#">Hindi</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- My Account Dropdown -->
                 <div class="dropdown">
                     <a class="text-dark text-decoration-none dropdown-toggle" href="#" role="button"
@@ -459,43 +476,47 @@
                 <!-- First Banner -->
                 <div class="col-md-3 col-sm-6">
                     <div class="card border-0 shadow-sm banner-card position-relative">
-                        <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Unsold Cars Clearance">
-                        <div class="overlay">
-                            <a href="#" class="fw-bold">Search Ads</a>
-                            <p class="card-text fw-semibold">Unsold Cars Clearance Of 2023 In Agra (Limited
-                                Time)</p>
-                        </div>
+                        <a href="#" class="text-decoration-none">
+                            <div class="card border-0 shadow-sm banner-card position-relative">
+                                <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Unsold Cars Clearance">
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Second Banner -->
                 <div class="col-md-3 col-sm-6">
                     <div class="card border-0 shadow-sm banner-card position-relative">
-                        <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Cinematic Splits">
-                        <div class="overlay">
-                            <a href="#" class="fw-bold">Herbeauty</a>
-                            <p class="card-text fw-semibold">14 Cinematic Splits That Deliver Unforgettable
-                                Mic-Drop Moments</p>
-                        </div>
+                        <a href="#" class="text-decoration-none">
+                            <div class="card border-0 shadow-sm banner-card position-relative">
+                                <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Unsold Cars Clearance">
+                            </div>
+                        </a>
+
                     </div>
                 </div>
                 <!-- Third Banner -->
                 <div class="col-md-3 col-sm-6">
                     <div class="card border-0 shadow-sm banner-card position-relative">
-                        <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Cringe Moment">
-                        <div class="overlay">
-                            <a href="#" class="fw-bold">Brainberries</a>
-                            <p class="card-text fw-semibold">The Cringe That Broke The Internet</p>
-                        </div>
+                        <a href="#" class="text-decoration-none">
+                            <div class="card border-0 shadow-sm banner-card position-relative">
+                                <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Unsold Cars Clearance">
+                            </div>
+                        </a>
+
                     </div>
                 </div>
                 <!-- Fourth Banner -->
                 <div class="col-md-3 col-sm-6">
                     <div class="card border-0 shadow-sm banner-card position-relative">
-                        <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Tech Update">
-                        <div class="overlay">
-                            <a href="#" class="fw-bold">Tech World</a>
-                            <p class="card-text fw-semibold">Latest Gadgets That Are Changing The World</p>
-                        </div>
+                        <a href="#" class="text-decoration-none">
+                            <div class="card border-0 shadow-sm banner-card position-relative">
+                                <img src="img/bg-img/3.jpg" class="card-img-top banner-img" alt="Unsold Cars Clearance">
+                                <!-- <div class="overlay">
+                                    <p class="card-text fw-semibold">Unsold Cars Clearance Of 2023 In Agra (Limited Time)</p>
+                                </div> -->
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -586,7 +607,17 @@
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
 </body>
 
 </html>
